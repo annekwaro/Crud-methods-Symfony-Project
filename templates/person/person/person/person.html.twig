@@ -1,0 +1,28 @@
+<!-- templates/person/index.html.twig -->
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Persons</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Employment Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in persons %}
+                <tr>
+                    <td>{{ person.id }}</td>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.address }}</td>
+                    <td>{{ person.employmentStatus }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
